@@ -41,7 +41,8 @@ extern "C"
 #define FIFO_WATERMARK (31 * 16 + 14) // 16-bit: DMP will send FIFO interrupt if FIFO count > FIFO watermark. FIFO watermark is set to 80% of actual FIFO size by default
 
 // motion event control
-#define MOTION_EVENT_CTL (4 * 16 + 14) // 16-bit: configure DMP for Android L and Invensense specific features
+// #define MOTION_EVENT_CTL (4 * 16 + 14) // 16-bit: configure DMP for Android L and Invensense specific features
+#define MOTION_EVENT_CTL 0x03C0 // On the advise of issue 56
 
 // indicates to DMP which sensors are available
 /*	1: gyro samples available
